@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstrologicalCalculation", "AstrologicalCalculation\AstrologicalCalculation.csproj", "{5844544A-53D2-4C9C-AA6D-4203C7C444F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5844544A-53D2-4C9C-AA6D-4203C7C444F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5844544A-53D2-4C9C-AA6D-4203C7C444F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5844544A-53D2-4C9C-AA6D-4203C7C444F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5844544A-53D2-4C9C-AA6D-4203C7C444F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB0272C2-BA56-4784-AEC1-B5D1F0257859}
+	EndGlobalSection
+EndGlobal
