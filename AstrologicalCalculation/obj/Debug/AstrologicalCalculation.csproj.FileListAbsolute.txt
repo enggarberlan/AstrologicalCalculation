@@ -1,0 +1,11 @@
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\bin\Debug\AstrologicalCalculation.exe.config
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\bin\Debug\AstrologicalCalculation.exe
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\bin\Debug\AstrologicalCalculation.pdb
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\obj\Debug\AstrologicalCalculation.csproj.AssemblyReference.cache
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\obj\Debug\AstrologicalCalculation.csproj.SuggestedBindingRedirects.cache
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\obj\Debug\AstrologicalCalculation.Form1.resources
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\obj\Debug\AstrologicalCalculation.Properties.Resources.resources
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\obj\Debug\AstrologicalCalculation.csproj.GenerateResource.cache
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\obj\Debug\AstrologicalCalculation.csproj.CoreCompileInputs.cache
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\obj\Debug\AstrologicalCalculation.exe
+C:\Users\30065453\Source\Repos\AstrologicalCalculation\AstrologicalCalculation\obj\Debug\AstrologicalCalculation.pdb
