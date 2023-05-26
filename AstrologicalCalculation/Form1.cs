@@ -51,6 +51,7 @@ namespace AstrologicalCalculation
             }
         }
 
+        #region Search Button
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
             int target;
@@ -71,7 +72,9 @@ namespace AstrologicalCalculation
             }
             
         }
+        #endregion Search Button
 
+        #region Edit Button
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TextBoxInput.Text))
@@ -100,7 +103,9 @@ namespace AstrologicalCalculation
                 MessageBox.Show("Please select an item from the list.");
             }
         }
+        #endregion Edit Button
 
+        #region Sort Button
         private void ButtonSort_Click(object sender, EventArgs e)
         {
             for (int outer = 0; outer < max - 1; outer++)
@@ -124,6 +129,9 @@ namespace AstrologicalCalculation
             }
 
         }
+        #endregion Sort Button
+
+        #region Methods
         //Method to fill Array with random numbers
         private void FillArray()
         {
@@ -139,10 +147,10 @@ namespace AstrologicalCalculation
         //Method for calculate mid-extreme
         private double CalculateMidExtreme()
         {
-            double sum = myArray.Sum();
+            
             double min = myArray.Min();
             double max = myArray.Max();
-            return (sum - min - max) / (max - min);
+            return (min + max) / 2;
         }
 
         //Method to calculate mode
@@ -167,12 +175,14 @@ namespace AstrologicalCalculation
             int range = myArray.Max() - myArray.Min();
             return range;
         }
+        #endregion Methods
 
         #region Mid Extreme Button
         private void ButtonMidExtreme_Click(object sender, EventArgs e)
         {
             double midExtreme = CalculateMidExtreme();
-            TextBoxOutput.Text = midExtreme.ToString("0.00");
+            TextBoxOutput.Text = "Mid Extreme: (" + myArray.Min() + " + " + myArray.Max()
+                + ") / 2 = " + midExtreme;
         }
         #endregion Mid Extreme Button
 
@@ -180,7 +190,7 @@ namespace AstrologicalCalculation
         private void ButtonMode_Click(object sender, EventArgs e)
         {
             int mode = CalculateMode();
-            TextBoxOutput.Text = mode.ToString(); 
+            TextBoxOutput.Text = "Mode: " + mode.ToString(); 
         }
         #endregion Mode Button
 
@@ -191,9 +201,15 @@ namespace AstrologicalCalculation
             double arrayAverage = arraySum / max;
             TextBoxOutput.Text = "Average: " + String.Format("{0:N2}", arrayAverage);
         }
+
+
         #endregion Average Button
 
-
-
+        #region Range Button
+        private void ButtonRange_Click(object sender, EventArgs e)
+        {
+            
+        }
+        #endregion Range Button
     }
 }
