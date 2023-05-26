@@ -187,7 +187,9 @@ namespace AstrologicalCalculation
         #region Average Button
         private void ButtonAverage_Click(object sender, EventArgs e)
         {
-            
+            double arraySum = Convert.ToDouble(myArray.Sum());
+            double arrayAverage = arraySum / max;
+            TextBoxOutput.Text = "Average: " + String.Format("{0:N2}", arrayAverage);
         }
         #endregion Average Button
 
