@@ -37,6 +37,8 @@
             this.ButtonMode = new System.Windows.Forms.Button();
             this.ButtonAverage = new System.Windows.Forms.Button();
             this.ButtonRange = new System.Windows.Forms.Button();
+            this.ButtonSequentialSearch = new System.Windows.Forms.Button();
+            this.TextBoxOutput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ListBoxOutput
@@ -50,9 +52,9 @@
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.Location = new System.Drawing.Point(156, 162);
+            this.ButtonSearch.Location = new System.Drawing.Point(42, 109);
             this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(198, 44);
+            this.ButtonSearch.Size = new System.Drawing.Size(85, 22);
             this.ButtonSearch.TabIndex = 1;
             this.ButtonSearch.Text = "Search";
             this.ButtonSearch.UseVisualStyleBackColor = true;
@@ -60,9 +62,9 @@
             // 
             // ButtonEdit
             // 
-            this.ButtonEdit.Location = new System.Drawing.Point(156, 223);
+            this.ButtonEdit.Location = new System.Drawing.Point(42, 137);
             this.ButtonEdit.Name = "ButtonEdit";
-            this.ButtonEdit.Size = new System.Drawing.Size(198, 44);
+            this.ButtonEdit.Size = new System.Drawing.Size(85, 25);
             this.ButtonEdit.TabIndex = 2;
             this.ButtonEdit.Text = "Edit";
             this.ButtonEdit.UseVisualStyleBackColor = true;
@@ -70,9 +72,9 @@
             // 
             // ButtonSort
             // 
-            this.ButtonSort.Location = new System.Drawing.Point(156, 288);
+            this.ButtonSort.Location = new System.Drawing.Point(42, 168);
             this.ButtonSort.Name = "ButtonSort";
-            this.ButtonSort.Size = new System.Drawing.Size(198, 44);
+            this.ButtonSort.Size = new System.Drawing.Size(85, 27);
             this.ButtonSort.TabIndex = 3;
             this.ButtonSort.Text = "Sort";
             this.ButtonSort.UseVisualStyleBackColor = true;
@@ -80,53 +82,75 @@
             // 
             // TextBoxInput
             // 
-            this.TextBoxInput.Location = new System.Drawing.Point(110, 41);
+            this.TextBoxInput.Location = new System.Drawing.Point(42, 68);
             this.TextBoxInput.Name = "TextBoxInput";
-            this.TextBoxInput.Size = new System.Drawing.Size(278, 20);
+            this.TextBoxInput.Size = new System.Drawing.Size(157, 20);
             this.TextBoxInput.TabIndex = 4;
             this.TextBoxInput.TextChanged += new System.EventHandler(this.TextBoxInput_TextChanged);
             // 
             // ButtonMidExtreme
             // 
-            this.ButtonMidExtreme.Location = new System.Drawing.Point(42, 358);
+            this.ButtonMidExtreme.Location = new System.Drawing.Point(168, 346);
             this.ButtonMidExtreme.Name = "ButtonMidExtreme";
             this.ButtonMidExtreme.Size = new System.Drawing.Size(114, 37);
             this.ButtonMidExtreme.TabIndex = 5;
             this.ButtonMidExtreme.Text = "Mid-Extreme";
             this.ButtonMidExtreme.UseVisualStyleBackColor = true;
+            this.ButtonMidExtreme.Click += new System.EventHandler(this.ButtonMidExtreme_Click);
             // 
             // ButtonMode
             // 
-            this.ButtonMode.Location = new System.Drawing.Point(321, 358);
+            this.ButtonMode.Location = new System.Drawing.Point(297, 303);
             this.ButtonMode.Name = "ButtonMode";
             this.ButtonMode.Size = new System.Drawing.Size(114, 37);
             this.ButtonMode.TabIndex = 6;
             this.ButtonMode.Text = "Mode";
             this.ButtonMode.UseVisualStyleBackColor = true;
+            this.ButtonMode.Click += new System.EventHandler(this.ButtonMode_Click);
             // 
             // ButtonAverage
             // 
-            this.ButtonAverage.Location = new System.Drawing.Point(42, 94);
+            this.ButtonAverage.Location = new System.Drawing.Point(168, 303);
             this.ButtonAverage.Name = "ButtonAverage";
             this.ButtonAverage.Size = new System.Drawing.Size(114, 37);
             this.ButtonAverage.TabIndex = 7;
             this.ButtonAverage.Text = "Average";
             this.ButtonAverage.UseVisualStyleBackColor = true;
+            this.ButtonAverage.Click += new System.EventHandler(this.ButtonAverage_Click);
             // 
             // ButtonRange
             // 
-            this.ButtonRange.Location = new System.Drawing.Point(321, 94);
+            this.ButtonRange.Location = new System.Drawing.Point(297, 346);
             this.ButtonRange.Name = "ButtonRange";
             this.ButtonRange.Size = new System.Drawing.Size(114, 37);
             this.ButtonRange.TabIndex = 8;
             this.ButtonRange.Text = "Range";
             this.ButtonRange.UseVisualStyleBackColor = true;
             // 
+            // ButtonSequentialSearch
+            // 
+            this.ButtonSequentialSearch.Location = new System.Drawing.Point(172, 397);
+            this.ButtonSequentialSearch.Name = "ButtonSequentialSearch";
+            this.ButtonSequentialSearch.Size = new System.Drawing.Size(238, 29);
+            this.ButtonSequentialSearch.TabIndex = 9;
+            this.ButtonSequentialSearch.Text = "Sequential Search";
+            this.ButtonSequentialSearch.UseVisualStyleBackColor = true;
+            // 
+            // TextBoxOutput
+            // 
+            this.TextBoxOutput.Location = new System.Drawing.Point(168, 268);
+            this.TextBoxOutput.Name = "TextBoxOutput";
+            this.TextBoxOutput.ReadOnly = true;
+            this.TextBoxOutput.Size = new System.Drawing.Size(243, 20);
+            this.TextBoxOutput.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TextBoxOutput);
+            this.Controls.Add(this.ButtonSequentialSearch);
             this.Controls.Add(this.ButtonRange);
             this.Controls.Add(this.ButtonAverage);
             this.Controls.Add(this.ButtonMode);
@@ -154,6 +178,8 @@
         private System.Windows.Forms.Button ButtonMode;
         private System.Windows.Forms.Button ButtonAverage;
         private System.Windows.Forms.Button ButtonRange;
+        private System.Windows.Forms.Button ButtonSequentialSearch;
+        private System.Windows.Forms.TextBox TextBoxOutput;
     }
 }
 

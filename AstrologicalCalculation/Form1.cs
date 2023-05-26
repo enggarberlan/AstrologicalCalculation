@@ -35,10 +35,13 @@ namespace AstrologicalCalculation
 
 
         }
+
+        #region Unused 
         private void TextBoxInput_TextChanged(object sender, EventArgs e)
         {
 
         }
+        #endregion Unused
 
         private void ListBoxOutput_MouseClick(object sender, MouseEventArgs e)
         {
@@ -50,33 +53,23 @@ namespace AstrologicalCalculation
 
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            int lowBound = 0;
-            int highBound = max;
             int target;
+            if(!int.TryParse(TextBoxInput.Text, out target))
             if (!(Int32.TryParse(TextBoxInput.Text, out target)))
             {
                 MessageBox.Show("You must enter an integer");
                 return;
             }
-            while (lowBound <= highBound)
+            int index = Array.IndexOf(myArray, target);
+            if (index != -1)
             {
-                int mid = (lowBound + highBound) / 2;
-                if (myArray[mid] == target)
-                {
-                    MessageBox.Show("Found at index " + mid);
-                    return;
-                }
-                else if (myArray[mid] < target)
-                {
-                    lowBound = mid + 1;
-                }
-                else
-                {
-                    highBound = mid - 1;
-                }
-
+                MessageBox.Show("Found at index " + index);
             }
-            MessageBox.Show("Not found. Try again.");
+            else
+            {
+                MessageBox.Show("Not found. Try again, mate");
+            }
+            
         }
 
         private void ButtonEdit_Click(object sender, EventArgs e)
@@ -129,6 +122,7 @@ namespace AstrologicalCalculation
 
                 }
             }
+
         }
         //Method to fill Array with random numbers
         private void FillArray()
@@ -141,5 +135,63 @@ namespace AstrologicalCalculation
                 myArray[i] = rand.Next(10, 99);
             }
         }
+
+        //Method for calculate mid-extreme
+        private double CalculateMidExtreme()
+        {
+            double sum = myArray.Sum();
+            double min = myArray.Min();
+            double max = myArray.Max();
+            return (sum - min - max) / (max - min);
+        }
+
+        //Method to calculate mode
+        private int CalculateMode()
+        {
+            var groups = myArray.GroupBy(x => x);
+            int maxCount = groups.Max(g=>g.Count());
+            int mode = groups.First(g=>g.Count() == maxCount).Key;
+            return mode;
+        }
+
+        //Method to calculate average
+        private double CalculateAverage()
+        {
+            double average = myArray.Average();
+            return average;
+        }
+
+        //Method to calculate range
+        private int CalculateRange()
+        {
+            int range = myArray.Max() - myArray.Min();
+            return range;
+        }
+
+        #region Mid Extreme Button
+        private void ButtonMidExtreme_Click(object sender, EventArgs e)
+        {
+            double midExtreme = CalculateMidExtreme();
+            TextBoxOutput.Text = midExtreme.ToString("0.00");
+        }
+        #endregion Mid Extreme Button
+
+        #region Mode Button
+        private void ButtonMode_Click(object sender, EventArgs e)
+        {
+            int mode = CalculateMode();
+            TextBoxOutput.Text = mode.ToString(); 
+        }
+        #endregion Mode Button
+
+        #region Average Button
+        private void ButtonAverage_Click(object sender, EventArgs e)
+        {
+            
+        }
+        #endregion Average Button
+
+
+
     }
 }
