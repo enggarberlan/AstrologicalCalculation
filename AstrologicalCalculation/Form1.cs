@@ -208,7 +208,9 @@ namespace AstrologicalCalculation
         #region Range Button
         private void ButtonRange_Click(object sender, EventArgs e)
         {
-            
+            int arrayRange = myArray.Max() - myArray.Min();
+            TextBoxOutput.Text = "Range: " + arrayRange + " (" + myArray.Min() +
+            " to " + myArray.Max() + ")";
         }
         #endregion Range Button
     }
