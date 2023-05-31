@@ -64,7 +64,8 @@ namespace AstrologicalCalculation
             int index = Array.IndexOf(myArray, target);
             if (index != -1)
             {
-                MessageBox.Show("Found at index " + index);
+                TextBoxOutput.Text = "Found " + TextBoxInput.Text + " at index " + index;
+                ListBoxOutput.SelectedIndex = index;
             }
             else
             {
