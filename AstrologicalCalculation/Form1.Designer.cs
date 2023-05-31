@@ -136,6 +136,7 @@
             this.ButtonSequentialSearch.TabIndex = 9;
             this.ButtonSequentialSearch.Text = "Sequential Search";
             this.ButtonSequentialSearch.UseVisualStyleBackColor = true;
+            this.ButtonSequentialSearch.Click += new System.EventHandler(this.ButtonSequentialSearch_Click);
             // 
             // TextBoxOutput
             // 

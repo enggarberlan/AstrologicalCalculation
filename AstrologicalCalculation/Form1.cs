@@ -212,6 +212,34 @@ namespace AstrologicalCalculation
             TextBoxOutput.Text = "Range: " + arrayRange + " (" + myArray.Min() +
             " to " + myArray.Max() + ")";
         }
+
+
         #endregion Range Button
+
+        #region Sequential Search Button
+        private void ButtonSequentialSearch_Click(object sender, EventArgs e)
+        {
+            int target;
+            bool found = false;
+            if (!(Int32.TryParse(TextBoxInput.Text, out target)))
+            {
+                MessageBox.Show("Please enter an integer");
+                return;
+            }
+            for (int x = 0; x < max; x++)
+            {
+                if (myArray[x] == target)
+                {
+                    MessageBox.Show("Found at index " + x);
+                    found = true;
+                }
+            }
+            if (!found)
+            {
+                MessageBox.Show("Not found, try again");
+            }
+        }
+        #endregion Sequential Search Button
+
     }
 }
